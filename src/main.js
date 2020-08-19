@@ -6,16 +6,22 @@ import 'normalize.css/normalize.css'
 import '@/styles/index.scss'
 
 import '@/icons'
+
+import bus from '@/utils/bus'
 // import Dialog from './components/dialog'
 import Loading from './components/loading'
 // import toast from './components/toast'
+import { NavBar, Icon } from 'vant'
 
 import utils from './utils/utils'
 import VueScroller from 'vue-scroller'
 import { get, post } from './utils/ajax'
 
+Vue.use(Icon)
+Vue.use(NavBar)
 Vue.use(VueScroller)
 Vue.use(utils)
+Vue.use(bus)
 
 // Vue.prototype.$dialog = Dialog
 Vue.prototype.$loading = Loading

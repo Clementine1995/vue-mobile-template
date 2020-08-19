@@ -5,7 +5,7 @@ import Layout from '@/layout'
 
 Vue.use(VueRouter)
 
-const routes = [
+export const routes = [
   {
     path: '/redirect',
     component: Layout,

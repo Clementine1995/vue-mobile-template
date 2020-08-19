@@ -20,7 +20,7 @@ export default {
     filterKeepAliveRouter(routes) {
       const keepAliveList = []
       const filterRouter = (routes2) => {
-        _(routes2).forEach((route) => {
+        routes2.forEach((route) => {
           if (route.meta && route.meta.keepAlive) keepAliveList.push(route.name)
           if (route.children && route.children.length) filterRouter(route.children)
         })
