@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { VueVantLocales } from '@/lang'
+// import { VueVantLocales } from '@/lang'
 export default {
   name: 'Navbar',
   data() {
@@ -24,16 +24,16 @@ export default {
     }
   },
   computed: {
-    language: {
-      get() {
-        return this.$store.state.app.language
-      },
-      set(val) {
-        VueVantLocales(val)
-        this.$i18n.locale = val
-        this.$store.dispatch('app/SetLanguage', val)
-      }
-    },
+    // language: {
+    //   get() {
+    //     return this.$store.state.app.language
+    //   },
+    //   set(val) {
+    //     VueVantLocales(val)
+    //     this.$i18n.locale = val
+    //     this.$store.dispatch('app/SetLanguage', val)
+    //   }
+    // },
     pageTitle() {
       return this.$route.meta.title
     },

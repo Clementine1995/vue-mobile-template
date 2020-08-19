@@ -12,7 +12,7 @@ const routes = [
     children: [
       {
         path: '/redirect/:path(.*)',
-        component: () => import('@/pages/redirect/index')
+        component: () => import('@/views/redirect/index')
       }
     ]
   },
@@ -33,9 +33,6 @@ const routes = [
     path: '/about',
     name: 'About',
     component: Layout,
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     children: [
       {
         path: '',

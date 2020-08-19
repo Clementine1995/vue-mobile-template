@@ -43,20 +43,22 @@ module.exports = {
       return args
     })
 
-    const svgRule = config.module.rule('svg')
-    svgRule.uses.clear()
-    svgRule.exclude.add(/node_modules/)
-    svgRule
+    // set svg-sprite-loader
+    config.module
+      .rule('svg')
+      .exclude.add(resolve('src/icons'))
+      .end()
+    config.module
+      .rule('icons')
       .test(/\.svg$/)
+      .include.add(resolve('src/icons'))
+      .end()
       .use('svg-sprite-loader')
       .loader('svg-sprite-loader')
       .options({
         symbolId: 'icon-[name]'
       })
-
-    const imagesRule = config.module.rule('images')
-    imagesRule.exclude.add(resolve('src/components/icon/svg'))
-    config.module.rule('images').test(/\.(png|jpe?g|gif|svg)(\?.*)?$/)
+      .end()
   },
 
   configureWebpack: (config) => {

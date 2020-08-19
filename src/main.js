@@ -4,13 +4,12 @@ import router from './router'
 
 import 'normalize.css/normalize.css'
 import '@/styles/index.scss'
-import './components/icon/index'
 
+import '@/icons'
 // import Dialog from './components/dialog'
 import Loading from './components/loading'
 // import toast from './components/toast'
 
-import './utils/FastClick'
 import utils from './utils/utils'
 import VueScroller from 'vue-scroller'
 import { get, post } from './utils/ajax'
